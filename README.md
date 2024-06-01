@@ -19,7 +19,7 @@ export CERTORAKEY=<personal_access_key>
 ```
 Now, Change your environment to the cloned repo using,
 ```
-cd Certora
+cd CertoraTest
 ```
 
 # Repo Overview
