@@ -66,5 +66,6 @@ Till Now we can test for
 # Improvements: 
 - only the token holder or an approved third party can reduce an account's balance.
 - only the token holder (or a permit) can increase allowance. The spender can decrease it by using it.
+- and more to be added
 
 ## Spec Details
