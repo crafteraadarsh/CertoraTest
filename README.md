@@ -50,3 +50,21 @@ certoraRun ./certora/conf/default.conf
 # Spec Details 
 
 This spec file is written for a **Erc20** and covers the formal verification tests to check the behaviour of an **Erc20 Contract**.
+Till Now we can test for 
+- Transfer must move `amount` tokens from the caller's account to `recipient`.
+- Transfer must revert if the sender's balance is too small.
+- Transfer must not revert unless
+  the sender doesn't have enough funds,
+  or the message value is nonzero,
+  or the recipient's balance would overflow,
+  or the message sender is 0,
+  or the recipient is 0.
+- If `approve` changes a holder's allowance, then it was called by the holder.
+- Rule to check Balance should not change using transferFrom if allowance is not given,
+  if given then Balance should only update as per the transferfrom,
+  and allowance should get reduced by that number.
+# Improvements: 
+- only the token holder or an approved third party can reduce an account's balance.
+- only the token holder (or a permit) can increase allowance. The spender can decrease it by using it.
+
+## Spec Details
